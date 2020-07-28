@@ -1,0 +1,5 @@
+D:\Git\CurrentWeather\CurrentWeather.Services\bin\Debug\netcoreapp3.1\CurrentWeather.Services.deps.json
+D:\Git\CurrentWeather\CurrentWeather.Services\bin\Debug\netcoreapp3.1\CurrentWeather.Services.dll
+D:\Git\CurrentWeather\CurrentWeather.Services\obj\Debug\netcoreapp3.1\CurrentWeather.Services.csprojAssemblyReference.cache
+D:\Git\CurrentWeather\CurrentWeather.Services\obj\Debug\netcoreapp3.1\CurrentWeather.Services.AssemblyInfoInputs.cache
+D:\Git\CurrentWeather\CurrentWeather.Services\obj\Debug\netcoreapp3.1\CurrentWeather.Services.AssemblyInfo.cs
