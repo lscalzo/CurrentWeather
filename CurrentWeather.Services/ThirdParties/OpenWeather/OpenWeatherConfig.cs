@@ -4,7 +4,9 @@ using System.Text;
 
 namespace CurrentWeather.Services.ThirdParties.OpenWeather
 {
-    class OpenWeatherConfig
+    public class OpenWeatherConfig
     {
+        public string APIKey { get; set; }
+        public string CurrentWeatherURL { get; set; }
     }
 }

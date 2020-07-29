@@ -3,3 +3,10 @@ D:\Git\CurrentWeather\CurrentWeather.Services\bin\Debug\netcoreapp3.1\CurrentWea
 D:\Git\CurrentWeather\CurrentWeather.Services\obj\Debug\netcoreapp3.1\CurrentWeather.Services.csprojAssemblyReference.cache
 D:\Git\CurrentWeather\CurrentWeather.Services\obj\Debug\netcoreapp3.1\CurrentWeather.Services.AssemblyInfoInputs.cache
 D:\Git\CurrentWeather\CurrentWeather.Services\obj\Debug\netcoreapp3.1\CurrentWeather.Services.AssemblyInfo.cs
+D:\Git\CurrentWeather\CurrentWeather.Services\bin\Debug\netcoreapp3.1\CurrentWeather.Services.pdb
+D:\Git\CurrentWeather\CurrentWeather.Services\obj\Debug\netcoreapp3.1\CurrentWeather.Services.csproj.CoreCompileInputs.cache
+D:\Git\CurrentWeather\CurrentWeather.Services\obj\Debug\netcoreapp3.1\CurrentWeather.Services.dll
+D:\Git\CurrentWeather\CurrentWeather.Services\obj\Debug\netcoreapp3.1\CurrentWeather.Services.pdb
+D:\Git\CurrentWeather\CurrentWeather.Services\bin\Debug\netcoreapp3.1\CurrentWeather.Helpers.dll
+D:\Git\CurrentWeather\CurrentWeather.Services\bin\Debug\netcoreapp3.1\CurrentWeather.Helpers.pdb
+D:\Git\CurrentWeather\CurrentWeather.Services\obj\Debug\netcoreapp3.1\CurrentWeather.Services.csproj.CopyComplete

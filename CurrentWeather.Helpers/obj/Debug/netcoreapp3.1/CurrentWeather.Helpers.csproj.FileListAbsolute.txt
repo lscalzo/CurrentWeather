@@ -1,0 +1,9 @@
+D:\Git\CurrentWeather\CurrentWeather.Helpers\bin\Debug\netcoreapp3.1\CurrentWeather.Helpers.deps.json
+D:\Git\CurrentWeather\CurrentWeather.Helpers\bin\Debug\netcoreapp3.1\CurrentWeather.Helpers.dll
+D:\Git\CurrentWeather\CurrentWeather.Helpers\obj\Debug\netcoreapp3.1\CurrentWeather.Helpers.csprojAssemblyReference.cache
+D:\Git\CurrentWeather\CurrentWeather.Helpers\obj\Debug\netcoreapp3.1\CurrentWeather.Helpers.AssemblyInfoInputs.cache
+D:\Git\CurrentWeather\CurrentWeather.Helpers\obj\Debug\netcoreapp3.1\CurrentWeather.Helpers.AssemblyInfo.cs
+D:\Git\CurrentWeather\CurrentWeather.Helpers\bin\Debug\netcoreapp3.1\CurrentWeather.Helpers.pdb
+D:\Git\CurrentWeather\CurrentWeather.Helpers\obj\Debug\netcoreapp3.1\CurrentWeather.Helpers.csproj.CoreCompileInputs.cache
+D:\Git\CurrentWeather\CurrentWeather.Helpers\obj\Debug\netcoreapp3.1\CurrentWeather.Helpers.dll
+D:\Git\CurrentWeather\CurrentWeather.Helpers\obj\Debug\netcoreapp3.1\CurrentWeather.Helpers.pdb

@@ -5,4 +5,24 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="CurrentWeather.Helpers\**" />
+    <Compile Remove="CurrentWeather.Services\**" />
+    <EmbeddedResource Remove="CurrentWeather.Helpers\**" />
+    <EmbeddedResource Remove="CurrentWeather.Services\**" />
+    <None Remove="CurrentWeather.Helpers\**" />
+    <None Remove="CurrentWeather.Services\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="CurrentWeather.Helpers\CurrentWeather.Helpers.csproj" />
+    <ProjectReference Include="CurrentWeather.Services\CurrentWeather.Services.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

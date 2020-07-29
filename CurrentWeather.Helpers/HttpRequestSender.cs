@@ -16,7 +16,8 @@ namespace CurrentWeather.Helpers
         public async Task<string> Get(string URL)
         {
             var response = await httpClient.GetAsync(URL);
-            return await response.Content.ReadAsStringAsync();
+            var content = await response.Content.ReadAsStringAsync();
+            return content;
         }
 
 

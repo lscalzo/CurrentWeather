@@ -1,5 +1,8 @@
-﻿using System;
+﻿using CurrentWeather.Helpers;
+using System;
 using System.Collections.Generic;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text;
 
 namespace CurrentWeather.Services.ThirdParties.OpenWeather
@@ -10,9 +13,24 @@ namespace CurrentWeather.Services.ThirdParties.OpenWeather
     }
     public class OpenWeatherService : IOpenWeatherService
     {
-        public void GetCurrentWeather(string city)
+        private OpenWeatherConfig config;
+
+        public OpenWeatherService()
         {
-            throw new NotImplementedException();
+            config = ConfigHelper.GetConfigAs<OpenWeatherConfig>("OpenWeatherAPI");
+        }
+        public async void GetCurrentWeather(string city)
+        {
+            try
+            {
+                var URL = $"{config.CurrentWeatherURL}q={city}&appid={config.APIKey}";
+                var requestSender = new HttpRequestSender();
+                var response = await requestSender.Get(URL);
+            }
+            catch(Exception ex)
+            {
+                throw;
+            }
         }
     }
 }

@@ -10,4 +10,8 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CurrentWeather.Helpers\CurrentWeather.Helpers.csproj" />
+  </ItemGroup>
+
 </Project>

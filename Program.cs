@@ -1,4 +1,6 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿
+using CurrentWeather.Helpers;
+using CurrentWeather.Services.ThirdParties.OpenWeather;
 using System;
 
 namespace WeatherForecast
@@ -7,31 +9,12 @@ namespace WeatherForecast
     {
         static void Main(string[] args)
         {
+            ConfigHelper.InitializeConfig();
+            var weatherService = new OpenWeatherService();
             Console.WriteLine("Please enter the name of a city");
-        }
-
-        private static void ConfigureServices(IServiceCollection serviceCollection)
-        {
-            // Add logging
-            serviceCollection.AddSingleton(LoggerFactory.Create(builder =>
-            {
-                builder
-                    .AddSerilog(dispose: true);
-            }));
-
-            serviceCollection.AddLogging();
-
-            // Build configuration
-            configuration = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetParent(AppContext.BaseDirectory).FullName)
-                .AddJsonFile("appsettings.json", false)
-                .Build();
-
-            // Add access to generic IConfigurationRoot
-            serviceCollection.AddSingleton<IConfigurationRoot>(configuration);
-
-            // Add app
-            serviceCollection.AddTransient<App>();
+            var city = Console.ReadLine();
+            weatherService.GetCurrentWeather(city);
+            Console.ReadLine();
         }
     }
 
