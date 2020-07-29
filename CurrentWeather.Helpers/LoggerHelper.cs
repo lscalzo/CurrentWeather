@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using NLog;
 
 namespace CurrentWeather.Helpers
 {
-    class LoggerHelper
+    public static class LoggerHelper
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
+
+        public static Logger GetLogger()
+        {
+            return logger;
+        }
     }
 }

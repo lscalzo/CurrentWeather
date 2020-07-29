@@ -2,41 +2,50 @@
 using CurrentWeather.Helpers;
 using CurrentWeather.Services;
 using CurrentWeather.Services.ThirdParties.OpenWeather;
+using NLog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 
 namespace WeatherForecast
 {
     class Program
     {
+        private static Logger logger = LoggerHelper.GetLogger();
         static async Task Main(string[] args)
         {
-            ConfigHelper.InitializeConfig();
-            var weatherService = new OpenWeatherService();
-
-            var historyService = new HistoryLocationService();
-            var history = historyService.GetSavedLocations();
-
-            Console.WriteLine("Please enter the name of a city and iso country code separated by a comma, example : Perth, AU");
-            DisplayHistory(history);
-            var input = Console.ReadLine().Trim();
-            string city;
-            string country;
-            ValidateInput(input, history, out city, out country);
-            var currentWeather = await weatherService.GetCurrentWeather(city.Trim(' '), country?.Trim(' ').ToUpper());
-            Console.WriteLine(currentWeather);
-            while (currentWeather.Contains("We couldn't find"))
+            try
             {
-                Console.WriteLine("Please enter another city name or a number from the list.");
-                input = Console.ReadLine();
+                ConfigHelper.InitializeConfig();
+                var weatherService = new OpenWeatherService();
+
+                var historyService = new HistoryLocationService();
+                var history = historyService.GetSavedLocations();
+
+                Console.WriteLine("Please enter the name of a city and iso country code separated by a comma, example : Perth, AU");
+                DisplayHistory(history);
+                var input = Console.ReadLine().Trim();
+                string city;
+                string country;
                 ValidateInput(input, history, out city, out country);
-                currentWeather = await weatherService.GetCurrentWeather(city.Trim(' '), country?.Trim(' ').ToUpper());
+                var currentWeather = await weatherService.GetCurrentWeather(city.Trim(' '), country?.Trim(' ').ToUpper());
+                Console.WriteLine(currentWeather);
+                while (currentWeather.Contains("We couldn't find"))
+                {
+                    Console.WriteLine("Please enter another city name or a number from the list.");
+                    input = Console.ReadLine();
+                    ValidateInput(input, history, out city, out country);
+                    currentWeather = await weatherService.GetCurrentWeather(city.Trim(' '), country?.Trim(' ').ToUpper());
+                }
+                Console.WriteLine(currentWeather);
+                Console.ReadLine();
             }
-            Console.WriteLine(currentWeather);
-            Console.ReadLine();
+            catch(Exception ex)
+            {
+                logger.Error(ex);
+            }
+            
         }
 
         private static void ValidateInput(string input, List<string> history, out string city, out string country)
